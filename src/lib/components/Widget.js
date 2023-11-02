@@ -33,7 +33,6 @@ export const Widget = React.forwardRef((props, forwardedRef) => {
     src: propsSrc,
     code: propsCode,
     depth,
-    overrides,
     config: propsConfig,
     props: propsProps,
     ...forwardedProps
@@ -88,16 +87,10 @@ export const Widget = React.forwardRef((props, forwardedRef) => {
     }
     if (srcOrCode?.src) {
       const src = srcOrCode.src;
-      let [srcPath, version] = src.split("@");
-
-      const srcOverwritten = overrides?.[srcPath.toString()];
-      if (srcOverwritten) {
-        [srcPath, version] = srcOverwritten.split("@");
-      }
-
+      const [srcPath, version] = src.split("@");
       const code = cache.socialGet(
         near,
-        srcPath,
+        srcPath.toString(),
         false,
         version, // may be undefined, meaning `latest`
         undefined,
@@ -176,7 +169,6 @@ export const Widget = React.forwardRef((props, forwardedRef) => {
       },
       confirmTransactions,
       depth,
-      overrides,
       widgetSrc: src,
       requestCommit,
       version: uuid(),
@@ -192,7 +184,6 @@ export const Widget = React.forwardRef((props, forwardedRef) => {
     near,
     code,
     depth,
-    overrides,
     requestCommit,
     confirmTransactions,
     configs,
