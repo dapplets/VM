@@ -33,6 +33,13 @@ async function updateAccount(near, walletState) {
   near.accountId = walletState?.accounts?.[0]?.accountId ?? null;
   if (near.accountId) {
     near.publicKey = null;
+
+    // Mutable Web Extension doesn't store keys in the local storage
+    // ToDo: parametrize key storage and pass internal extension storage to the VM 
+    if (walletState?.selectedWalletId === "mutable-web-extension") {
+      return;
+    }
+
     try {
       if (walletState?.selectedWalletId === "here-wallet") {
         const hereKeystore = ls.get("herewallet:keystore");
