@@ -7580,10 +7580,10 @@ react-fast-compare@^3.0.1:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.1.tgz#53933d9e14f364281d6cba24bfed7a4afb808b5f"
   integrity sha512-xTYf9zFim2pEif/Fw16dBiXpe0hoy5PxcD8+OwBnTtNLfIm3g6WxhKNurY+6OmdH1u6Ta/W/Vl6vjbYP1MFnDg==
 
-react-files@^3.0.0-alpha.3:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-files/-/react-files-3.0.0.tgz#d2284e33106cc5ddcc547e8633cad0b633c017b2"
-  integrity sha512-/Zz7S98vZFYxHw3RVSZcf3dD+xO714ZQd/jEhIp8q+MofBgydXWlHdw05TA4jradL7XpZFPvJaIvM6Z6I5nIHw==
+react-files@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-files/-/react-files-3.0.1.tgz#b08b491fb4aef5c1527ecf2f797172fd22f890bb"
+  integrity sha512-QQScT6ppWmzSVfOmnndrRp8EXjbepZ6LwjlPl+7LfDaYCVUWQ1b+dXGTJWiHMfUfqvtACj8Nijv8XtEcHxoAVA==
 
 react-infinite-scroller@^1.2.6:
   version "1.2.6"
