@@ -18,7 +18,6 @@ export const Markdown = (props) => {
   } = props;
   return (
     <ReactMarkdown
-      plugins={[]}
       rehypePlugins={[]}
       remarkPlugins={[gfm, mentions, hashtags]}
       children={text}
